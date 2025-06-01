@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+.game-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.board {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 2px solid #333;
+    position: relative;
+    background-image: url('assets/images/ludo-board.png');
+    background-size: cover;
+}
+
+.controls {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#roll-dice {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#roll-dice:hover {
+    background-color: #45a049;
+}
+
+.dice-result, .player-turn {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.players {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.player {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    min-width: 150px;
+}
+
+.token {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid #333;
+}
+
+.player[data-player="1"] .token {
+    background-color: red;
+}
+
+.player[data-player="2"] .token {
+    background-color: green;
+}
+
+.player[data-player="3"] .token {
+    background-color: yellow;
+}
+
+.player[data-player="4"] .token {
+    background-color: blue;
+}
+
+.token.active {
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(255,255,255,0.8);
+}
